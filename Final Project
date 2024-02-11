@@ -1,0 +1,122 @@
+##### Step 1 in pseudocode
+class ItemToPurchase: # create a class called "ItemToPurchase"
+    def __init__(self): # create constructor with parameters
+        self.item_name = "none" # create an instance attribute
+        self.item_quantity = 0 # create an instance attribute
+        self.item_price = 0.00 # create an instance attribute
+
+##### Step 1a in pseudocode
+
+    def print_item_cost(self): # create a method "print_item_cost"
+        print(self.item_name, self.item_quantity, '@', '${}'.format(self.item_price), '=', '${}'.format(self.item_quantity * self.item_price))
+
+##### Step 1b in pseudocode
+
+Cart1 = ItemToPurchase() # create an instance called "Cart1" of the class called "ItemToPurchase"
+Cart1.item_name = str((input('Type the name of the first item in the shopping cart:'))) # create a value for this variable
+Cart1.item_quantity = int(input('The number of the first item in the shopping cart is:')) # create a value for this variable
+Cart1.item_price = float(input('Price of the first item in the shopping cart is:')) # create a value for this variable
+
+##### Step 1c in pseudocode
+
+Cart1.print_item_cost()
+
+##### Step 1d in pseudocode
+
+Cart2 = ItemToPurchase() # create an instance called "Cart2" of the class called "ItemToPurchase"
+Cart2.item_name = str((input('Type the name of the second item in the shopping cart:'))) # create a value for this variable
+Cart2.item_quantity = int(input('The number of the second item in the shopping cart is:')) # create a value for this variable
+Cart2.item_price = float(input('Price of the second item in the shopping cart is:')) # create a value for this variable
+Cart2.print_item_cost()
+
+##### Step 1e in pseudocode
+
+print('Total:', (Cart1.item_quantity * Cart1.item_price) + (Cart2.item_quantity * Cart2.item_price))
+
+
+##### Step 2 in pseudocode
+
+cart_items = [Cart1.item_name, Cart2.item_name] # create a list with cart items from class "ItemToPurchase"
+cart_price = [Cart1.item_price, Cart2.item_price] # create a list with cart prices from class "ItemToPurchase"
+cart_price = [Cart1.item_quantity, Cart2.item_quantity] # create a list with cart quantity from class "ItemToPurchase"
+
+##### Step 3 in pseudocode
+
+class ShoppingCart: # create a class called "ShoppingCart"
+    def __init__(self): # create constructor with parameters
+        self.customer_name = "none" # create an instance attribute
+        self.current_date = "January 1, 2020" # create an instance attribute
+        self.cart_items = cart_items # create an instance attribute as a list
+
+##### Step 3a in pseudocode
+
+    def add_item(self, ItemToPurchase): # create a method with parameter "ItemToPurchase"
+        pass
+
+    def remove_item(self, ItemToPurchase): # create a method with "item_name" as parameter
+        pass
+
+    def modify_item(self, ItemToPurchase): # create a method with "ItemToPurchase" as parameter
+        pass
+
+##### Step 3b in pseudocode
+    
+    def get_num_items_in_cart(self, num_items_in_cart): # create a method
+        self.num_items_in_cart = ShoppingCart1.item_quantity + ShoppingCart2.item_quantity
+
+    def get_cost_of_cart(self, ItemToPurchase, cost_of_cart): # create a method
+        self.cost_of_cart = (Cart1.item_quantity * Cart1.item_cost) + (Cart2.item_quantity * Cart2.item_cost)
+
+
+##### Step 3c in pseudocode
+    
+    def print_total(self, ShoppingCart): # create a method
+        print(ShoppingCart1.customer_name, 's', 'Shopping Cart -', ShoppingCart1.current_date)
+        print('Number of Items :', Cart1.item_quantity + Cart2.item_quantity)
+        print('Total :', (Cart1.item_quantity * Cart1.item_price) + (Cart2.item_quantity * Cart2.item_price))
+
+    def print_descriptions(self, ShoppingCart): # create a method
+        print(ShoppingCart1.customer_name, 's', 'Shopping Cart -', ShoppingCart1.current_date)
+        print('Item Descriptions')
+        print(Cart1.item_name, ':', 'Sweet')
+        print(Cart2.item_name, ':', 'Bitter')
+
+##### Step 4 in pseudocode
+
+ShoppingCart1 = ShoppingCart() # Creating an instance called "ShoppingCart1" of the class called "ShoppingCart"
+ShoppingCart1.customer_name = str((input('Type the name of the customer:'))) # create a value for this variable from user input
+ShoppingCart1.current_date = str((input('Type todays date, example "Jan 1, 2020":'))) # create a value for this variable from user input
+ShoppingCart1.item_quantity = Cart1.item_quantity # create a value for this variable previous class "ItemToPurchase" information
+ShoppingCart1.item_cost = Cart1.print_item_cost() # create a value for this variable previous class "ItemToPurchase" information
+print(Cart1.item_name, 'Description', ':', 'Sweet')  # print out helpful information
+
+ShoppingCart2 = ShoppingCart() # Creating an instance called "ShoppingCart2" of the class called "ShoppingCart"
+ShoppingCart2.item_quantity = Cart2.item_quantity # create a value for this variable previous class "ItemToPurchase" information
+ShoppingCart2.item_cost = Cart2.print_item_cost() # create a value for this variable previous class "ItemToPurchase" information
+print(Cart2.item_name, 'Description', ':', 'Bitter') # print out helpful information
+
+##### Step 5 in pseudocode
+
+print_descriptions = ShoppingCart()
+print_descriptions.print_descriptions(ItemToPurchase)
+
+print_total = ShoppingCart()
+print_total.print_total(ItemToPurchase)
+
+##### Step 6 in pseudocode
+
+AddItemShoppingCart = ShoppingCart() # Creating an instance called "AddItemShoppingCart" of the class called "ShoppingCart"
+AddItemShoppingCart.item_name = str((input('Type the name of the item you want to add to shopping cart:'))) # create a value for this variable from user input
+AddItemShoppingCart.item_description = str((input('Type the description of the item you want to add to shopping cart:'))) # create a value for this variable from user input
+AddItemShoppingCart.item_price = int(input('The price of the item you are adding to shopping cart is:')) # create a value for this variable from user input
+AddItemShoppingCart.item_quantity = int(input('The number of the item you are adding to shopping cart is:')) # create a value for this variable from user input
+AddItemShoppingCart.add_item(ItemToPurchase)
+
+RemoveItemShoppingCart = ShoppingCart() # Creating an instance called "RemoveItemShoppingCart" of the class called "ShoppingCart"
+RemoveItemShoppingCart.item_name = str((input('Type the name of the item you want to remove from shopping cart:'))) # create a value for this variable from user input
+RemoveItemShoppingCart.remove_item(ItemToPurchase)
+
+ChangeItemShoppingCart = ShoppingCart() # Creating an instance called "ChangeItemShoppingCart" of the class called "ShoppingCart"
+ChangeItemShoppingCart.item_name = str((input('Type the name of the item you want to change in shopping cart:'))) # create a value for this variable from user input
+ChangeItemShoppingCart.item_quantity = int(input('The number of the item you want to change in shopping cart is:')) # create a value for this variable from user input
+ChangeItemShoppingCart.modify_item(ItemToPurchase)
